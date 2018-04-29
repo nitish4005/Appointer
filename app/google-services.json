@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "799853644976",
+    "firebase_url": "https://appointer-bb66e.firebaseio.com",
+    "project_id": "appointer-bb66e",
+    "storage_bucket": "appointer-bb66e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799853644976:android:eb8ecbc5f13f6d8f",
+        "android_client_info": {
+          "package_name": "com.example.android.appointer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799853644976-6771b8icvn8kd14ksfjcdaksldc96fb2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.appointer",
+            "certificate_hash": "aced0e598038628fd21832fa0d244e5453d61d02"
+          }
+        },
+        {
+          "client_id": "799853644976-l2h38gs3f2vo2m71nevatka61s3poi92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV25dBB80EQdRGe_LMN6rAT2GViAlWZEY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799853644976-l2h38gs3f2vo2m71nevatka61s3poi92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

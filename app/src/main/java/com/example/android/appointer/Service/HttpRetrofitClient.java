@@ -21,7 +21,7 @@ public class HttpRetrofitClient {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("Url to be written here")
+                .baseUrl("http://appointer-backend-api.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

@@ -7,8 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class LoginActivity extends Activity
-{
+public class LoginActivity extends Activity {
     public static final String ENTER_PASSWORD = "Enter Password";
     public static final String ENTER_USERNAME = "Enter Username";
     private EditText usernameEt,passwordEt;

@@ -14,4 +14,13 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="recommended_services">Recommended Services</string>
+    <string name="services">Services</string>
+    <string name="plumber">Plumber</string>
+    <string name="electrician">Electrician</string>
+    <string name="developer">Freelancer</string>
+    <string name="painter">Painter</string>
+    <string name="grocery_shops">Grocery Shops</string>
+    <string name="tutor">Tutor</string>
+
+
 </resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signuplayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="40dp"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context="com.example.android.appointer.SignupActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Profile Details"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginTop="10dp"
+            android:textSize="28sp"
+            android:textColor="@color/colorPrimary"/>
+        <EditText
+            android:id="@+id/signupName"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColorHint="@color/colorPrimary"/>
+        <EditText
+            android:id="@+id/signupNumber"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile No."
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColorHint="@color/colorPrimary"/>
+        <EditText
+            android:id="@+id/signupEmail"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email (Optional)"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColorHint="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/signupPassword"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColorHint="@color/colorPrimary"/>
+        <EditText
+            android:id="@+id/signupConfirmPassword"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColorHint="@color/colorPrimary"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/signupTermsAndConditionsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Accept terms and Conditions"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/signupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signup_large"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
+
+</LinearLayout>

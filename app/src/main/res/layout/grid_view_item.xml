@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/gridItemIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/homeicon" />
+
+    <TextView
+        android:id="@+id/gridItemName"
+        android:layout_below="@id/gridItemIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/home"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        />
+</RelativeLayout>
