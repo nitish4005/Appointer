@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,11 +7,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:padding="40dp"
-    android:orientation="vertical"
     android:background="@drawable/background"
     tools:context="com.example.android.appointer.SignupActivity">
-
+    <LinearLayout
+        android:id="@+id/layoutSignUpForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp"
+        android:orientation="vertical"
+        android:visibility="visible">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,15 +34,32 @@
             android:textSize="20sp"
             android:maxLines="1"
             android:textColorHint="@color/colorPrimary"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            app:ccp_textSize="15dp"
+            android:id="@+id/countryCodePicker">
+
+        </com.hbb20.CountryCodePicker>
+
+
         <EditText
             android:id="@+id/signupNumber"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile No."
+            android:inputType="phone"
             android:textSize="20sp"
             android:maxLines="1"
             android:textColorHint="@color/colorPrimary"/>
+       </LinearLayout>
         <EditText
             android:id="@+id/signupEmail"
             android:layout_marginTop="10dp"
@@ -93,3 +114,75 @@
             android:layout_gravity="center"/>
 
 </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout2"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/verifyNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"
+            android:text="Verify " />
+        <TextView
+            android:id="@+id/waitMesseage_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:text="Waiting to automatically detect an SMS sent to "
+            android:layout_below="@id/verifyNumber"/>
+
+
+        <EditText
+            android:id="@+id/enterCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verifyNumber"
+            android:layout_centerHorizontal="true"
+            android:ems="6"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="130dp"
+            android:maxLength="10"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterCode"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Resend SMS" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Enter 6-digit code"
+            android:layout_below="@+id/enterCode"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:id="@+id/verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:text="VerifyCode"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>

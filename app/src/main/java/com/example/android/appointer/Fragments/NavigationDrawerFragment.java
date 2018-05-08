@@ -201,8 +201,7 @@ public class NavigationDrawerFragment extends Fragment {
             return;
         }
 
-        Picasso.with(activityRef).load(url).noFade().into(profilePic);
-
+        Picasso.get().load(url).into(profilePic);
     }
 
     public void loadPic() {

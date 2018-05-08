@@ -1,8 +1,10 @@
-package com.example.android.appointer.Service.ServiceProviders;
+package com.example.android.appointer.Service.NetworkCallsService;
 
 import android.util.Log;
 
 import com.example.android.appointer.Model.ServiceProvidersModel;
+import com.example.android.appointer.Model.SignupModelClass;
+import com.example.android.appointer.Model.SignupResponseModel;
 import com.example.android.appointer.Service.HttpCallsInterface;
 import com.example.android.appointer.Service.HttpRetrofitClient;
 import com.example.android.appointer.Service.ServiceFactory;
@@ -20,9 +22,9 @@ import static com.example.android.appointer.Common.SharedPreferenceConstants.SER
  * Created by Prasad on 22-Apr-18.
  */
 
-public class ServiceProviders_ServiceImp implements ServiceProviders_Service {
+public class NetworkCalls_ServiceImp implements NetworkCalls_Service {
     private HttpCallsInterface httpCallsInterface;
-    private ServiceProvidersModel serviceProvidersModel = null;
+
     private Gson gson = new Gson();
     private HttpCallsInterface getHttpCallsInterface() {
         if (null == httpCallsInterface) {
@@ -36,6 +38,7 @@ public class ServiceProviders_ServiceImp implements ServiceProviders_Service {
     public ServiceProvidersModel getServiceProviders(String type) {
         Log.i("nk","inside call methode");
         Gson gson = new Gson();
+        ServiceProvidersModel serviceProvidersModel = null;
         Call<ServiceProvidersModel> getServiveProvidersList = getHttpCallsInterface().getListOfServiceProviders(type);
         try {
             serviceProvidersModel = getServiveProvidersList.execute().body();
@@ -49,6 +52,17 @@ public class ServiceProviders_ServiceImp implements ServiceProviders_Service {
             }
         }
         return serviceProvidersModel;
+    }
+    @Override
+    public SignupResponseModel signupUser(SignupModelClass signupModelClass) {
+        Log.i("nk","inside call methode signup");
+        SignupResponseModel signupResponseModel = null;
+        Call<SignupResponseModel> sendSignupDetails = getHttpCallsInterface().sendSignupDetails(signupModelClass);
+        try {
+            signupResponseModel = sendSignupDetails.execute().body();
+        } catch (IOException e) {
+        }
+        return signupResponseModel;
     }
 }
 

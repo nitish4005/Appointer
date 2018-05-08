@@ -50,7 +50,7 @@ public class ServicesRecyclerViewAdapter extends RecyclerView.Adapter<ServicesRe
 
             @Override
             protected ServiceProvidersModel doInBackground(Void... voids) {
-                serviceproviderslist = ServiceFactory.getServiceProviders_service().getServiceProviders(route[position]);
+                serviceproviderslist = ServiceFactory.getNetworkCalls_service().getServiceProviders(route[position]);
                 return serviceproviderslist;
             }
 
